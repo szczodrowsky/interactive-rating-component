@@ -1,0 +1,255 @@
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+/*
+    2. Remove default margin
+  */
+* {
+  margin: 0;
+}
+/*
+    Typographic tweaks!
+    3. Add accessible line-height
+    4. Improve text rendering
+  */
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+/*
+    5. Improve media defaults
+  */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+/*
+    6. Remove built-in form typography styles
+  */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+/*
+    7. Avoid text overflows
+  */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+/*variables*/
+:root {
+  --clr-Very-Dark-Blue: #131518;
+}
+
+/*COMPONENTS*/
+
+body {
+  display: flex;
+  padding: 12.1875rem 0rem 11.8125rem 0rem;
+  justify-content: center;
+  align-items: center;
+  background: var(--clr-Very-Dark-Blue);
+  min-height: 100vh;
+  font-family: Overpass;
+}
+.hidden {
+  display: none;
+}
+
+.rating-container {
+  width: 25.75rem;
+  height: 26rem;
+  flex-shrink: 0;
+  border-radius: 1.875rem;
+  background: var(
+    --black-gradient,
+    radial-gradient(98.96% 98.96% at 50% 0%, #232a34 0%, #181e27 100%)
+  );
+  padding: 2rem;
+}
+
+.svg-container {
+  background-color: hsl(213, 19%, 18%);
+  padding: 1rem;
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+}
+.rating-tittle {
+  color: var(--Pure-White, #fff);
+  font-feature-settings: "clig" off, "liga" off;
+  font-size: 1.75rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.rating-content {
+  width: 21.25rem;
+  color: var(--Light-Grey, #969fad);
+  font-feature-settings: "clig" off, "liga" off;
+  font-size: 0.9375rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.5rem;
+  margin-top: 0.44rem;
+}
+.rating-numbers {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.31rem;
+  margin-top: 1.5rem;
+  margin-right: 2rem;
+  margin-left: 2.44rem;
+}
+
+.btn {
+  background-color: hsl(213, 19%, 18%);
+  width: 3.1875rem;
+  height: 3.1875rem;
+  flex-shrink: 0;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  color: var(--Medium-Gray, #7c8798);
+  text-align: center;
+  font-feature-settings: "clig" off, "liga" off;
+  font-family: Overpass;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.5rem; /* 150% */
+  letter-spacing: 0.0125rem;
+}
+.btn:hover {
+  background-color: hsla(217, 12%, 54%, 1);
+  color: hsla(0, 0%, 100%, 1);
+}
+.btn:focus {
+  background-color: hsla(25, 97%, 53%, 1);
+  color: hsla(0, 0%, 100%, 1);
+}
+.submit {
+  width: 21.3125rem;
+  height: 2.8125rem;
+  flex-shrink: 0;
+  margin-top: 2rem;
+  border-radius: 1.40625rem;
+  background: var(--Orange, #fc7614);
+  border: none;
+  color: var(--Pure-White, #fff);
+  font-family: Overpass;
+  font-size: 0.9375rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 0.125rem;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.submit:hover {
+  color: var(--Orange, #fc7614);
+  background-color: hsla(0, 0%, 100%, 1);
+}
+
+.inactive {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+/*submited part */
+.submit-container {
+  width: 25.75rem;
+  height: 26rem;
+  flex-shrink: 0;
+  border-radius: 1.875rem;
+  background: var(
+    --black-gradient,
+    radial-gradient(98.96% 98.96% at 50% 0%, #232a34 0%, #181e27 100%)
+  );
+}
+
+.svg-container-submit {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  padding-top: 2.81rem;
+  padding-right: 8.06rem;
+  /* padding-bottom: 16.44rem; */
+  padding-left: 7.56rem;
+}
+.h2-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 12.0625rem;
+  height: 2rem;
+  flex-shrink: 0;
+  border-radius: 1.40625rem;
+  background: var(--Dark-Blue, #262e38);
+  margin-top: 2.25rem;
+  margin-bottom: 2rem;
+  margin-right: 8.81rem;
+  margin-left: 6.88rem;
+}
+.submit-tittle {
+  color: var(--Orange, #fc7614);
+  text-align: center;
+  font-family: Overpass;
+  font-size: 0.9375rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.5rem; /* 160% */
+  padding-top: 2px;
+  padding-bottom: 2px;
+  padding-left: 19px;
+  padding-right: 19px;
+}
+.submit-second {
+  color: #fff;
+  font-feature-settings: "clig" off, "liga" off;
+  font-family: Overpass;
+  font-size: 1.75rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-align: center;
+}
+.submit-content {
+  width: 21.25rem;
+  color: var(--Light-Grey, #969fad);
+  text-align: center;
+  font-feature-settings: "clig" off, "liga" off;
+  font-family: Overpass;
+  font-size: 0.9375rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.5rem; /* 160% */
+  margin-left: 2rem;
+  margin-right: 2.5rem;
+  margin-top: 0.44rem;
+  margin-bottom: 2.81rem;
+}
